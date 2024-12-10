@@ -11,6 +11,7 @@ import { HomePage } from "./pages/HomePage";
 
 import ComingSoon from "./pages/ComingSoon";
 import LoginPage from "./pages/LoginPage";
+import AccountPage from "./pages/AccountPage";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/locations" exact element={<MapPage/>}></Route>
           <Route path="/login" exact element={<LoginPage/>}></Route>
           <Route path="/comingsoon" exact element={<ComingSoon/>}></Route>
+          <Route path="/account" exact element={<AccountPage/>}></Route>
         </Routes>
       </BrowserRouter>
       {/* <Footer /> */}
