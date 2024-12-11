@@ -11,7 +11,7 @@ function MainComponent() {
     return (
         <>
             <FLNavbar></FLNavbar>
-            <div className='bg-gray-900'>
+            <div className='dark:bg-gray-900 bg-gray-50'>
                 <div className='flex md:flex-row items-center justify-stretch flex-col'>
                     <WorldMap />
                     <div className='flex flex-col max-h-[560px] mx-1 gap-2 overflow-y-auto'>
@@ -25,25 +25,25 @@ function MainComponent() {
                     <CardOfCards></CardOfCards>
                 </div> */}
                 </div>
-                <div className='md:pl-28 pb-10'>
+                {/* <div className='md:pl-28 pb-10'>
                     <div className="mt-4 flex items-center space-x-4">
                         <div className="flex items-center space-x-2">
                             <span className="w-3 h-3 bg-teal-500 rounded-full"></span>
-                            <span className='text-gray-50'>Regions</span>
+                            <span className='dark:text-gray-50 text-gray-900'>Regions</span>
                         </div>
                         <div className="flex items-center space-x-2">
                             <span className="w-3 h-3 bg-yellow-500 rounded-full"></span>
-                            <span className='text-gray-50'>Coming soon</span>
+                            <span className='dark:text-gray-50 text-gray-900'>Coming soon</span>
                         </div>
-                    </div>
+                    </div> */}
                     {/* Buttons */}
-                    <div className="mt-6 -ml-3">
+                    {/* <div className="mt-6 -ml-3">
                         <button className='flex flex-row'>
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
                                 viewBox="-5 -1 24 24"
-                                stroke="white"
+                                stroke="gray"
                                 className="w-8 h-8"
                             >
                                 <path
@@ -53,7 +53,7 @@ function MainComponent() {
                                     d={"M4 6h16M4 12h16M4 18h16"}
                                 />
                             </svg>
-                            <span className="text-gray-50 px-4 py-2 rounded text-sm">
+                            <span className="dark:text-gray-50 text-gray-900 px-4 py-2 rounded text-sm">
                                 List View
                             </span>
                             <button className="ml-4 bg-teal-300 px-4 py-2 rounded text-sm">
@@ -62,8 +62,8 @@ function MainComponent() {
                         </button>
 
 
-                    </div>
-                </div>
+                    </div> */}
+                {/* </div> */}
             </div>
 
 

@@ -12,6 +12,10 @@ import { HomePage } from "./pages/HomePage";
 import ComingSoon from "./pages/ComingSoon";
 import LoginPage from "./pages/LoginPage";
 import AccountPage from "./pages/AccountPage";
+import FleetOverview from "./pages/FleetOverview";
+import TaskView from "./pages/TaskView";
+import ReportView from "./pages/ReportView";
+import ControlInterface from "./pages/ControlInterface";
 
 function App() {
   return (
@@ -23,6 +27,10 @@ function App() {
           <Route path="/login" exact element={<LoginPage/>}></Route>
           <Route path="/comingsoon" exact element={<ComingSoon/>}></Route>
           <Route path="/account" exact element={<AccountPage/>}></Route>
+          <Route path="/fleetoverview" exact element={<FleetOverview/>}></Route>
+          <Route path="/taskview" exact element={<TaskView/>}></Route>
+          <Route path="/reportview" exact element={<ReportView/>}></Route>
+          <Route path="/control" exact element={<ControlInterface/>}></Route>
         </Routes>
       </BrowserRouter>
       {/* <Footer /> */}

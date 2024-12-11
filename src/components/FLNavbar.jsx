@@ -42,7 +42,7 @@ const FLNavbar = () => {
   };
 
   return (
-    <nav className="bg-gray-900 text-gray-50 ">
+    <nav className="dark:bg-gray-900 dark:text-gray-50 bg-gray-50 text-gray-900">
       <div className="flex justify-between items-center py-4 px-6 lg:px-12">
         {/* Logo */}
         <div className="text-xl font-bold">
@@ -86,11 +86,11 @@ const FLNavbar = () => {
             </a>
           </div>
           <a href="/account">
-            <button className="bg-gray-700 px-4 py-2 rounded" >
+            <button className="dark:bg-gray-700 bg-gray-200 px-4 py-2 rounded" >
               My Account
             </button>
           </a>
-          <div className="bg-white text-gray-900 px-6 py-2 rounded-full border-2 border-white">
+          <div className="dark:bg-white dark:text-gray-900 bg-blue-500 text-gray-50 px-6 py-2 rounded-full border-2 border-white">
             Welcome, John Doe
           </div>
           <img
@@ -113,7 +113,7 @@ const FLNavbar = () => {
           <a href="#" className="hover:underline">
             Support
           </a>
-          <button className="bg-gray-700 px-4 py-2 rounded">
+          <button className="dark:bg-gray-700 bg-gray-50 px-4 py-2 rounded">
             My Account
           </button>
           <div className="flex flex-row justify-evenly">

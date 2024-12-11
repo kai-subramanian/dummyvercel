@@ -47,12 +47,12 @@ const WorldMap = () => {
 
   return (
     <>
-      <div className="relative flex justify-center w-3/4 bg-gray-900">
+      <div className="relative flex justify-center w-3/4 dark:bg-gray-900 bg-gray-50">
         {/* Tooltip */}
         {tooltip.visible && (
           <div
-            className="absolute z-10 px-3 py-1 text-white bg-gray-800 rounded shadow-lg pointer-events-none"
-            style={{ top: tooltip.y - 10, left: tooltip.x + 10}} // Adjust offsets as needed
+            className="absolute z-10 px-3 py-1 dark:text-white text-black dark:bg-gray-800 bg-gray-200 rounded shadow-lg pointer-events-none"
+            style={{ top: tooltip.y - 90, left: tooltip.x + 10}} // Adjust offsets as needed
           >
             {tooltip.name}<br></br>
             {tooltip.type === "present" ? "Present" : "Upcoming"}
@@ -63,7 +63,7 @@ const WorldMap = () => {
           projection="geoMercator"
           viewBox="17 -5 889 600"
           projectionConfig={{ scale: 125, center: [-25,35] }}
-          className="shadow-lg rounded-lg bg-gray-900"
+          className="shadow-lg rounded-lg dark:bg-gray-900 bg-gray-50"
         >
           {/* Render Geographies */}
           <Geographies geography={geoUrl}>
@@ -73,8 +73,8 @@ const WorldMap = () => {
                   key={geo.rsmKey}
                   geography={geo}
                   style={{
-                    default: { fill: "#467a76", stroke: "#000", strokeWidth: "0px" },
-                    hover: { fill: "#007bff", outline: "none" },
+                    default: { fill: "#007bff", stroke: "#000", strokeWidth: "0px" },
+                    hover: { fill: "#00307d", outline: "white" },
                     pressed: { fill: "#023770", outline: "none" },
                   }}
                 />
@@ -103,19 +103,19 @@ const WorldMap = () => {
                 <rect width="100%" height="100%" fill="transparent" />
                 <g>
                   <path
-                    fill={type === "present" ? "#34D399" : "#F59E0B"}
+                    fill={type === "present" ? "#F59E0B" : "#F59E0B"}
                     d="M117.578,227.889H46.771v68.598h70.807V227.889z M97.578,276.487H66.771v-28.598h30.807V276.487z"
                   />
                   <path
-                    fill={type === "present" ? "#34D399" : "#F59E0B"}
+                    fill={type === "present" ? "#F59E0B" : "#F59E0B"}
                     d="M203.257,227.889H132.45v68.598h70.807V227.889z M183.257,276.487H152.45v-28.598h30.807V276.487z"
                   />
                   <path
-                    fill={type === "present" ? "#34D399" : "#F59E0B"}
+                    fill={type === "present" ? "#F59E0B" : "#F59E0B"}
                     d="M288.936,227.889h-70.807v68.598h70.807V227.889z M268.936,276.487h-30.807v-28.598h30.807V276.487z"
                   />
                   <path
-                    fill={type === "present" ? "#34D399" : "#F59E0B"}
+                    fill={type === "present" ? "#F59E0B" : "#F59E0B"}
                     d="M291.014,188.668v-34.485h-20.095L251.356,43.785h-53.718l-19.562,110.398h-20.633l-13.467-45.603H78.44l-13.467,45.603
 				H44.693v34.485H5.434v147.039h324.84V188.668H291.014z M214.406,63.785h20.183l16.018,90.398h-52.219L214.406,63.785z
 				 M93.388,128.58h35.642l7.561,25.603H85.827L93.388,128.58z M64.692,174.183h206.321v14.282H64.692V174.183z M310.273,315.707
