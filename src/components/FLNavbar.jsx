@@ -75,15 +75,18 @@ const FLNavbar = () => {
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center space-x-4">
           <div className="flex space-x-6 items-end">
-            <a href="#" className="hover:underline">
-              About FLS
-            </a>
-            <a href="#" className="hover:underline">
-              Contact Us
-            </a>
-            <a href="#" className="hover:underline">
-              Support
-            </a>
+          <a href="/reportview" className="hover:underline">
+            Report View
+          </a>
+          <a href="/taskview" className="hover:underline">
+            Task View
+          </a>
+          <a href="/control" className="hover:underline">
+            Controls
+          </a>
+          <a href="/fleetoverview" className="hover:underline">
+            Fleet
+          </a>
           </div>
           <a href="/account">
             <button className="dark:bg-gray-700 bg-gray-200 px-4 py-2 rounded" >
