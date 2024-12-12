@@ -4,16 +4,24 @@ import FLNavbar from "../components/FLNavbar";
 
 const TaskView = () => {
     const [activeTab, setActiveTab] = useState('Ad-hoc');
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setIsMenuOpen(!isMenuOpen);
+    };
     return (
         <>
-            <FLNavbar/>
+            <FLNavbar />
             <div className="flex min-h-screen bg-gray-50 text-gray-800">
+
                 {/* Sidebar */}
-                <aside className="w-64 bg-white shadow-md">
-                    <div className="p-6">
-                        <h1 className="text-2xl font-semibold">Robot AI</h1>
-                    </div>
+
+
+                <aside className="hidden lg:flex w-64 bg-white shadow-md">
                     <nav className="mt-6">
+                        <div className="pl-12">
+                            <h1 className="text-2xl pb-6 pt-1 font-semibold">Robot AI</h1>
+                        </div>
                         {[
                             { label: 'Dashboard', icon: '🏠' },
                             { label: 'Inspections', icon: '🔍' },
@@ -23,7 +31,7 @@ const TaskView = () => {
                         ].map((item) => (
                             <button
                                 key={item.label}
-                                className={`flex items-center p-4 space-x-5 text-sm font-medium ${item.active ? 'bg-gray-100 text-gray-900' : 'text-gray-500 hover:bg-gray-50'
+                                className={`flex items-center pl-12 py-5 space-x-5 text-sm font-medium ${item.active ? 'bg-gray-100 text-gray-900' : 'text-gray-500 hover:bg-gray-50'
                                     }`}
                             >
                                 <span className="mr-2">
@@ -35,8 +43,56 @@ const TaskView = () => {
                     </nav>
                 </aside>
 
+                {isMenuOpen && (
+                    <div className="lg:hidden flex flex-col space-y-4 px-6 pb-4">
+                        <div className="p-6">
+                            <h1 className="text-2xl font-semibold">Robot AI</h1>
+                        </div>
+                        <nav className="mt-6">
+                            {[
+                                { label: 'Dashboard', icon: '🏠' },
+                                { label: 'Inspections', icon: '🔍' },
+                                { label: 'Task list', icon: '📋', active: true },
+                                { label: 'Reports', icon: '📊' },
+                                { label: 'Settings', icon: '⚙️' },
+                            ].map((item) => (
+                                <button
+                                    key={item.label}
+                                    className={`flex items-center md:flex-row flex-col p-4 space-x-5 text-sm min-w-full font-medium ${item.active ? 'bg-gray-100 text-gray-900' : 'text-gray-500 hover:bg-gray-50'
+                                        }`}
+                                >
+                                    <span className="flex flex-col md:flex-row mr-2">
+                                        {item.icon}<br></br>
+                                        {item.label}
+                                    </span>
+                                </button>
+                            ))}
+                        </nav>
+                    </div>
+                )}
                 {/* Main Content */}
                 <main className="flex-1 p-6">
+                    <div className="lg:hidden">
+                        <button
+                            onClick={toggleMenu}
+                            className="text-gray-500 focus:outline-none"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                stroke="currentColor"
+                                className="w-6 h-6"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    strokeWidth={2}
+                                    d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"}
+                                />
+                            </svg>
+                        </button>
+                    </div>
                     {/* Header */}
                     <div className="mb-6">
                         <h2 className="text-2xl font-bold">Task list</h2>

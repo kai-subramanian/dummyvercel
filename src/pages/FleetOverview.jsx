@@ -1,6 +1,10 @@
 import React from 'react';
 import FLNavbar from '../components/FLNavbar';
+import { LineChart } from '@mui/x-charts';
+
 const FleetOverview = () => {
+  const xData = [1, 2, 3, 5, 8, 10, 12, 13, 15, 18]
+  const yData = [2, 5.5, 2, 8.5, 2, 5.5, 2, 5.5, 2, 5.5]
   return (
     <div className="min-h-screen bg-gray-50 p-4">
       {/* Header
@@ -23,7 +27,7 @@ const FleetOverview = () => {
           </button>
         </div>
       </header> */}
-      <FLNavbar/>
+      <FLNavbar />
 
       {/* Content */}
       <main className="mt-6 md:px-20 px-2">
@@ -52,9 +56,19 @@ const FleetOverview = () => {
               <div className="h-40 flex items-center justify-center">
                 {/* Placeholder for the Chart */}
                 <div className="w-full h-full bg-gray-300 rounded-md flex items-center justify-center">
-                  <span className="text-gray-500 text-3xl">
+                  {/* <span className="text-gray-500 text-3xl">
                     Battery Level Chart Will Showup Here Once I Find A Good React Chart Library.
-                  </span>
+                  </span> */}
+                  <LineChart
+                    xAxis={[{ data: xData }]}
+                    series={[
+                      {
+                        data: yData,
+                      },
+                    ]}
+                    width={900}
+                    height={200}
+                  />
                 </div>
               </div>
             </div>

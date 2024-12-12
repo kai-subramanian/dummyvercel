@@ -53,7 +53,7 @@ const FLNavbar = () => {
         <div className="lg:hidden">
           <button
             onClick={toggleMenu}
-            className="text-gray-50 focus:outline-none"
+            className="text-gray-500 focus:outline-none"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
