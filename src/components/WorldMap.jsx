@@ -63,6 +63,7 @@ const WorldMap = () => {
           projection="geoMercator"
           viewBox="17 -5 889 600"
           projectionConfig={{ scale: 125, center: [-25,35] }}
+          style={{width: "100%"}}
           className="shadow-lg rounded-lg dark:bg-gray-900 bg-gray-50"
         >
           {/* Render Geographies */}
