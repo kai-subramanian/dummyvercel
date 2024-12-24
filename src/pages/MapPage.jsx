@@ -9,12 +9,12 @@ function MainComponent() {
     ];
 
     return (
-        <>
+        <div className='max-h-full'>
             <FLNavbar></FLNavbar>
             <div className='dark:bg-gray-900 bg-gray-50'>
-                <div className='flex md:flex-row items-center align-baseline justify-stretch flex-col'>
+                <div className='flex md:flex-row items-center align-baseline justify-stretch flex-col max-w-screen'>
                     <WorldMap />
-                    <div className='flex flex-col min-h-screen mx-3 my-9 gap-2 overflow-y-auto'>
+                    <div className='flex flex-col max-h-screen mx-3 pr-10 gap-2 overflow-y-auto'>
                         <FactoryCard factoryData={factoryData[0]} />
                         <FactoryCard factoryData={factoryData[0]} />
                         <FactoryCard factoryData={factoryData[0]} />
@@ -67,7 +67,7 @@ function MainComponent() {
             </div>
 
 
-        </>
+        </div>
 
     );
 }

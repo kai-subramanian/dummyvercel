@@ -16,6 +16,7 @@ import FleetOverview from "./pages/FleetOverview";
 import TaskView from "./pages/TaskView";
 import ReportView from "./pages/ReportView";
 import ControlInterface from "./pages/ControlInterface";
+import Machines from "./pages/Machines";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
           <Route path="/taskview" exact element={<TaskView/>}></Route>
           <Route path="/reportview" exact element={<ReportView/>}></Route>
           <Route path="/control" exact element={<ControlInterface/>}></Route>
+          <Route path="/machines" exact element={<Machines/>}></Route>
         </Routes>
       </BrowserRouter>
       {/* <Footer /> */}
