@@ -2,7 +2,7 @@
   "name": "air-2.0",
   "private": true,
   "version": "0.0.0",
-  
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -26,6 +26,7 @@
     "react-router-dom": "^7.0.2",
     "react-simple-maps": "^3.0.0",
     "require": "^2.4.20",
+    "requirejs": "^2.3.7",
     "styled-components": "^6.1.13"
   },
   "devDependencies": {
