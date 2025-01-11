@@ -81,12 +81,17 @@ const LandingPage = () => {
                                             </div>
 
                                             {/* Login Button */}
-                                            <button
+
+                                            <a
                                                 type="submit"
-                                                className="w-full bg-indigo-500 text-white text-sm font-semibold py-2 rounded-lg hover:bg-indigo-600 transition"
+                                                href="/machines"
+                                                className="button w-full bg-indigo-500 text-white text-sm font-semibold py-2 px-12 align-middle justify-center rounded-lg hover:bg-indigo-600 transition"
                                             >
+
                                                 Login
-                                            </button>
+
+                                            </a>
+
                                         </form>
 
                                         {/* Links */}

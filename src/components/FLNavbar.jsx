@@ -75,18 +75,15 @@ const FLNavbar = () => {
         {/* Desktop Links */}
         <div className="hidden lg:flex items-center space-x-4">
           <div className="flex space-x-6 items-end">
-          <a href="/reportview" className="hover:underline">
-            Report View
-          </a>
-          <a href="/taskview" className="hover:underline">
-            Task View
-          </a>
-          <a href="/control" className="hover:underline">
-            Controls
-          </a>
-          <a href="/fleetoverview" className="hover:underline">
-            Fleet
-          </a>
+            <a href="/reportview" className="hover:underline">
+              About FLS
+            </a>
+            <a href="/control" className="hover:underline">
+              Robots
+            </a>
+            <a href="/control" className="hover:underline">
+              Support
+            </a>
           </div>
           <a href="/account">
             <button className="dark:bg-gray-700 bg-gray-200 px-4 py-2 rounded" >
@@ -108,20 +105,14 @@ const FLNavbar = () => {
       {isMenuOpen && (
         <div className="lg:hidden flex flex-col space-y-4 px-6 pb-4">
           <a href="/reportview" className="hover:underline">
-            Report View
-          </a>
-          <a href="/taskview" className="hover:underline">
-            Task View
-          </a>
-          <a href="/control" className="hover:underline">
-            Controls
-          </a>
-          <a href="/fleetoverview" className="hover:underline">
-            Fleet
-          </a>
-          <button className="dark:bg-gray-700 bg-gray-50 px-4 py-2 rounded">
-            My Account
-          </button>
+              About FLS
+            </a>
+            <a href="/control" className="hover:underline">
+              Robots
+            </a>
+            <a href="/control" className="hover:underline">
+              Support
+            </a>
           <div className="flex flex-row justify-evenly">
             <div className=" bg-white text-gray-900 px-6 py-2 rounded-full border-2 border-white">
               Welcome, John Doe
